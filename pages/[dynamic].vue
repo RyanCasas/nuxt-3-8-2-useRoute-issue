@@ -17,10 +17,10 @@
 <script>
 export default {
   async setup() {
+    const route = useRoute();
+
     // This is just to test and it can be anything else really
     await useFetch(`https://api.publicapis.org/entries`);
-
-    const route = useRoute();
 
     return {
       setupValue: route.params.dynamic,
